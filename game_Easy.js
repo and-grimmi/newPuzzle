@@ -1,4 +1,4 @@
-var game = new Phaser.Game(400, 400, Phaser.CANVAS, 'slidingpuzzle', { preload: preload, create: create });
+var game = new Phaser.Game(600, 600, Phaser.CANVAS, 'slidingpuzzle', { preload: preload, create: create });
 
 var PUZZLE_DIFFICULTY = 3;
 var PIECE_WIDTH;
