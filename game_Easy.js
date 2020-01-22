@@ -39,7 +39,7 @@ function prepareBoard() {
           piece = piecesGroup.create(j * PIECE_WIDTH, i * PIECE_HEIGHT, "background", shuffledIndexArray[piecesIndex]);
       }
       else { //initial position of black piece
-          piece = piecesGroup.create(j * PIECE_WIDTH, i * PIECE_HEIGHT, "background", shuffledIndexArray[piecesIndex]);
+          piece = piecesGroup.create(j * PIECE_WIDTH, i * PIECE_HEIGHT, "background");
           piece.black = true;
       }
       piece.name = 'piece' + i.toString() + 'x' + j.toString();
