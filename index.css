@@ -1,16 +1,12 @@
-#myObject{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-
+body {
+  background-color: #333;
 }
 
-#body{
-    background-image:url(assets/weltall.png); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+#slidingpuzzle {
+  border: 2px solid white;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
 }
+
