@@ -10,7 +10,7 @@ var piecesGroup,
     shuffledIndexArray = [];
 
 function preload() {
-  game.load.spritesheet("background", "assets/sam.jpg", PIECE_WIDTH, PIECE_HEIGHT);
+  game.load.spritesheet("background", "assets/sam.png", PIECE_WIDTH, PIECE_HEIGHT);
 }
 
 function create() {
