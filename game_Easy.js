@@ -13,6 +13,4 @@ class Game_Easy extends Phaser.Scene {
         background = this.add.image(0,0,'sam');
     }
 
-
-
 }
