@@ -1,8 +1,8 @@
 var game = new Phaser.Game(800, 800, Phaser.CANVAS, 'slidingpuzzle', { preload: preload, create: create });
 
 var PUZZLE_DIFFICULTY = 3;
-var PIECE_WIDTH = Phaser.Math.floor(game.world.width / PUZZLE_DIFFICULTY);
-var	PIECE_HEIGHT = Phaser.Math.floor(game.world.height / PUZZLE_DIFFICULTY);
+var PIECE_WIDTH;
+var	PIECE_HEIGHT;
 var	BOARD_COLS,
     BOARD_ROWS;
 
@@ -13,6 +13,8 @@ var piecesGroup,
     shuffledIndexArray = [];
 
 function preload() {
+  PIECE_WIDTH = Phaser.Math.floor(game.world.width / PUZZLE_DIFFICULTY);
+  PIECE_HEIGHT = Phaser.Math.floor(game.world.height / PUZZLE_DIFFICULTY);
   game.load.spritesheet("background", "assets/sam.png", PIECE_WIDTH, PIECE_HEIGHT);
 }
 
