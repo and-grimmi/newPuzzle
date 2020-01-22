@@ -1,6 +1,5 @@
 /**********************************************************     GLOBALE VARIABLEN   **********************************************/
 var background;           
-var PUZZLE_DIFFICULTY =
 
 
 class Game_Easy extends Phaser.Scene {
