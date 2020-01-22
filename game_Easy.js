@@ -6,11 +6,11 @@ class Game_Easy extends Phaser.Scene {
     }
 
     preload() {
-        game.load.spritesheet('sam','assets/sam.png');
+        this.load.spritesheet('sam','assets/sam.png');
     }
 
     create(){
-        var car = game.add.sprite(570,100,'sam');
+        var car = this.add.sprite(570,100,'sam');
     }
 
 
