@@ -7,7 +7,6 @@ var	BOARD_COLS,
     BOARD_ROWS;
 
 
-
 var piecesGroup,
     piecesAmount,
     shuffledIndexArray = [];
