@@ -1,9 +1,12 @@
 var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'slidingpuzzle', { preload: preload, create: create });
 
-var PIECE_WIDTH = 200,
-    PIECE_HEIGHT = 200,
+
+var PIECE_WIDTH = 100,
+    PIECE_HEIGHT = 100,
     BOARD_COLS,
     BOARD_ROWS;
+
+
 
 var piecesGroup,
     piecesAmount,
