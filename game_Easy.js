@@ -1,4 +1,4 @@
-var game = new Phaser.Game(400, 400, Phaser.CANVAS, 'phaser-example', {
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', {
   preload: preload,
   create: create,
   update: update
