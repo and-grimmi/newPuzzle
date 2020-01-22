@@ -11,7 +11,7 @@ new_font.load().then(function(loaded_face) {
 /**********************************************************    SETUP FÜR PHASER    ***********************************************/
 
 var config = {
-    type: Phaser.CANVAS,
+    type: Phaser.AUTO,
     width: 800,
     height: 800,
     physics: {
