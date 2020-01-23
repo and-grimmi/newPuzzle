@@ -1,6 +1,6 @@
-var game = new Phaser.Game(500, 500, Phaser.CANVAS, 'slidingpuzzle', { preload: preload, create: create });
+var game = new Phaser.Game(600, 600, Phaser.CANVAS, 'slidingpuzzle', { preload: preload, create: create });
 
-var PUZZLE_DIFFICULTY = 4;
+var PUZZLE_DIFFICULTY = 3;
 var PIECE_WIDTH;
 var	PIECE_HEIGHT;
 var	BOARD_COLS,
@@ -30,7 +30,7 @@ function prepareBoard() {
   BOARD_ROWS = Phaser.Math.floor(game.world.height / PIECE_HEIGHT);
   console.log(BOARD_COLS);
   console.log(BOARD_ROWS);
-  
+
   piecesAmount = BOARD_COLS * BOARD_ROWS;
 
   shuffledIndexArray = createShuffledIndexArray();
