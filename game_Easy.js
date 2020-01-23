@@ -28,7 +28,9 @@ function prepareBoard() {
 
   BOARD_COLS = Phaser.Math.floor(game.world.width / PIECE_WIDTH);
   BOARD_ROWS = Phaser.Math.floor(game.world.height / PIECE_HEIGHT);
-
+  console.log(BOARD_COLS);
+  console.log(BOARD_ROWS);
+  
   piecesAmount = BOARD_COLS * BOARD_ROWS;
 
   shuffledIndexArray = createShuffledIndexArray();
