@@ -221,12 +221,14 @@ function onPuzzleClick(tx, ty){
     mouse.x = tx;
     mouse.y = ty;
      //canMove
-    if (mouse.x < (canvasX + puzzleWidth) ||  
-         mouse.x > (canvasX) ||  
-         mouse.y > (canvasY) ||  
-         mouse.y < (canvasY + puzzleHeight)) {
-            movePiece();
-    }     
+    if (mouse.x > (canvasX + puzzleWidth) ||  
+         mouse.x < (canvasX) ||  
+         mouse.y < (canvasY) ||  
+         mouse.y > (canvasY + puzzleHeight)) {
+            
+    }  else{
+        movePiece();
+    }   
 }
 
 /**
