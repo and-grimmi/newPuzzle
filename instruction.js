@@ -47,6 +47,22 @@ class Instruction extends Phaser.Scene{
             this.scene.start('Start');
         });
 
+        var expl1 = this.add.text(0, 0, "Durch das Tauschen eines Puzzleteils", {fontFamily: 'AhkioW05-Light', fontSize: '60px', fill: "#000000"});
+        expl1.y = game.config.height * 0.10;
+        expl1.x = (game.config.width/2) - (expl1.width/2);
+
+        var expl2 = this.add.text(0, 0, "verlierst du eine Münze.", {fontFamily: 'AhkioW05-Light', fontSize: '60px', fill: "#000000"});
+        expl2.y = game.config.height * 0.15;
+        expl2.x = (game.config.width/2) - (expl2.width/2);
+
+        var expl3 = this.add.text(0, 0, "Pass auf,", {fontFamily: 'AhkioW05-Light', fontSize: '60px', fill: "#000000"});
+        expl3.y = game.config.height * 0.20;
+        expl3.x = (game.config.width/2) - (expl3.width/2);
+
+        var expl4 = this.add.text(0, 0, "dass du nicht alle Münzen ausgibst!!", {fontFamily: 'AhkioW05-Light', fontSize: '60px', fill: "#000000"});
+        expl4.y = game.config.height * 0.25;
+        expl4.x = (game.config.width/2) - (expl4.width/2);
+
 
 
         var video = this.add.video(game.config.width * 0.5, game.config.height * 0.60, 'gif');
