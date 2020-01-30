@@ -18,7 +18,6 @@ class Instruction extends Phaser.Scene{
     preload(){
         this.load.image('weltall', 'assets/weltall.png');
         this.load.image('home', 'assets/home.png');
-        //Icons erstellt von <a href="https://www.flaticon.com/de/autoren/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/de/" title="Flaticon"> www.flaticon.com</a>
         this.load.video('gif', 'assets/gif.mp4', 'loadeddata', false, true);
         
     }
@@ -39,7 +38,7 @@ class Instruction extends Phaser.Scene{
         background.alpha = 0.5;
 
         btn_home = this.add.image(50, 50, 'home');
-        //btn_home.setScale(0.2);
+        btn_home.setScale(0.15);
         btn_home.setDepth(1);
         btn_home.setInteractive();
         btn_home.on('pointerdown', () => {
