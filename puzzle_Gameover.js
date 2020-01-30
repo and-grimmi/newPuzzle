@@ -55,7 +55,7 @@ class Game_Over extends Phaser.Scene {
          Klickt man auf den Button, kommt man zu Hauptmenü
         **/
         btn_home = this.add.image(50, 50, 'home');
-       // btn_home.setScale(0.15);
+        btn_home.setScale(0.15);
         btn_home.setDepth(1);
         btn_home.setInteractive();
         btn_home.on('pointerdown', () => {
