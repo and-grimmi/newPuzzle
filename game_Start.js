@@ -21,7 +21,6 @@ class Start extends Phaser.Scene{
         this.load.image('weltall', 'assets/weltall.png');
         this.load.image('classic', 'assets/Splashsite_Classic.png');
         this.load.image('frage', 'assets/frage.png');
-        //this.load.video('gif', 'assets/gif.mp4', 'loadeddata', false, true);
         
     }
 
@@ -58,9 +57,6 @@ class Start extends Phaser.Scene{
         title.y = game.config.height * 0.1;
         title.x = (game.config.width/2) - (title.width/2);
 
-       /* var video = this.add.video(game.config.width * 0.5, game.config.height * 0.73, 'gif');
-        video.play(true);*/
-
 
         classic = this.add.image(0, 0, 'classic');
         classic.y = game.config.height * 0.73;
@@ -79,7 +75,7 @@ class Start extends Phaser.Scene{
         btn_easy.y = game.config.height * 0.20;
         btn_easy.x = game.config.width/2 - 75;
         btn_easy.setInteractive();
-        btn_easy.on('pointerup', () => {btn_easy.setStyle({fill: "#7F7F7F"}); this.scene.start('Picture_Selector',{ dificulty: 3, count: 20})});
+        btn_easy.on('pointerup', () => {btn_easy.setStyle({fill: "#7F7F7F"}); this.scene.start('Picture_Selector',{ dificulty: 3, winCoins: 10})});
         btn_easy.on('pointerover', () => {
             btn_easy.setShadow(3, 3, 'rgba(0,0,0,0.78)', 5);
         })
@@ -91,7 +87,7 @@ class Start extends Phaser.Scene{
         btn_medium.y = game.config.height * 0.30;
         btn_medium.x = game.config.width/2 - 75;
         btn_medium.setInteractive();
-        btn_medium.on('pointerup', () => {btn_medium.setStyle({fill: "#7F7F7F"}); this.scene.start('Picture_Selector',{ dificulty: 4, count: 25})});
+        btn_medium.on('pointerup', () => {btn_medium.setStyle({fill: "#7F7F7F"}); this.scene.start('Picture_Selector',{ dificulty: 4, winCoins: 20})});
         btn_medium.on('pointerover', () => {
             btn_medium.setShadow(3, 3, 'rgba(0,0,0,0.78)', 5);
         })
@@ -103,7 +99,7 @@ class Start extends Phaser.Scene{
         btn_hard.y = game.config.height * 0.40;
         btn_hard.x = game.config.width/2 - 75;
         btn_hard.setInteractive();
-        btn_hard.on('pointerup', () => {btn_hard.setStyle({fill: "#7F7F7F"}); this.scene.start('Picture_Selector',{ dificulty: 5, count: 30})});
+        btn_hard.on('pointerup', () => {btn_hard.setStyle({fill: "#7F7F7F"}); this.scene.start('Picture_Selector',{ dificulty: 5, winCoins: 30})});
         btn_hard.on('pointerover', () => {
             btn_hard.setShadow(3, 3, 'rgba(0,0,0,0.78)', 5);
         })
