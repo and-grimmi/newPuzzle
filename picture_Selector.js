@@ -4,7 +4,8 @@ var btn_home;                                                        // Button z
 var btn_img1, btn_img2, btn_img3, btn_img4;                          // Bildauswahl
 var background;                                                      // Hintergrundbild
 var coin, counterText, count;                                        // Komponenten für die Punkte (Münzen) 
-var levelDificulty;                                                 
+var levelDificulty;  
+var winCoins;                                               
                                
 
                                                       
@@ -16,8 +17,9 @@ class Picture_Selector extends Phaser.Scene{
 
     init(data) {
         levelDificulty = data.dificulty;
+        winCoins = data.winCoins;
         if (count == null || count == 0 || coinReset == true){
-            count = data.count;
+            count = 50;
         }
 
     }
@@ -60,7 +62,7 @@ class Picture_Selector extends Phaser.Scene{
         **/
         
         btn_home = this.add.image(50, 50, 'home');
-        //btn_home.setScale(0.15);
+        btn_home.setScale(0.15);
         btn_home.setDepth(1);
         btn_home.setInteractive();
         btn_home.on('pointerdown', () => {
