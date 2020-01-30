@@ -49,7 +49,7 @@ class Game_Win extends Phaser.Scene {
         congrats.y = (game.config.height * 0.08);
         congrats.x = (game.config.width / 2) - (congrats.width/2);
 
-        var expl1 = this.add.text(0, 0, "Du hast 10 Münzen", {fontFamily: 'AhkioW05-Light', fontSize: '70px', fill: "#000000"});
+        var expl1 = this.add.text(0, 0, "Du hast " + winCoins+ " Münzen", {fontFamily: 'AhkioW05-Light', fontSize: '70px', fill: "#000000"});
         expl1.y = game.config.height * 0.25;
         expl1.x = (game.config.width/2) - (expl1.width/2);
 
@@ -77,7 +77,7 @@ class Game_Win extends Phaser.Scene {
          Klickt man auf den Button, kommt man zu Hauptmenü
         **/
         btn_home = this.add.image(50, 50, 'home');
-        //btn_home.setScale(0.15);
+        btn_home.setScale(0.15);
         btn_home.setDepth(1);
         btn_home.setInteractive();
         btn_home.on('pointerdown', () => {
@@ -101,11 +101,11 @@ class Game_Win extends Phaser.Scene {
     update(){
 
         setTimeout(function(){ 
-            if(x <= 10){
+            if(x <= winCoins){
                 counterText.setText((count += 1));
                x++;
             }
-        }, 800);
+        }, 900);
 
     }
 
