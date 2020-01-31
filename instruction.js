@@ -18,7 +18,7 @@ class Instruction extends Phaser.Scene{
     preload(){
         this.load.image('weltall', 'assets/weltall.png');
         this.load.image('home', 'assets/home.png');
-        this.load.video('gif', 'assets/Anleitung.mp4', 'loadeddata', false, true);
+        this.load.video('anleitung', 'assets/Anleitung.mp4', 'loadeddata', false, true);
         
     }
 
@@ -64,8 +64,8 @@ class Instruction extends Phaser.Scene{
 
 
 
-        var video = this.add.video(game.config.width * 0.5, game.config.height * 0.70, 'gif');
-        video.play(true);
-        video.setScale(0.9);
+        var anleitung = this.add.video(game.config.width * 0.5, game.config.height * 0.65, 'anleitung');
+        anleitung.play(true);
+        anleitung.setScale(0.9);
     }
 }
