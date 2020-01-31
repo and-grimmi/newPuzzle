@@ -64,7 +64,7 @@ class Instruction extends Phaser.Scene{
 
 
 
-        var video = this.add.video(game.config.width * 0.5, game.config.height * 0.60, 'gif');
+        var video = this.add.video(game.config.width * 0.5, game.config.height * 0.70, 'gif');
         video.play(true);
         video.setScale(0.9);
     }
