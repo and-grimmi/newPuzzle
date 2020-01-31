@@ -18,7 +18,7 @@ class Instruction extends Phaser.Scene{
     preload(){
         this.load.image('weltall', 'assets/weltall.png');
         this.load.image('home', 'assets/home.png');
-        this.load.video('gif', 'assets/Anleitung.gif', 'loadeddata', false, true);
+        this.load.video('gif', 'assets/Anleitung.mp4', 'loadeddata', false, true);
         
     }
 
