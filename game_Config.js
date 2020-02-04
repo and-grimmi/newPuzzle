@@ -22,7 +22,7 @@ let config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
-    scene: [Start, Instruction, Picture_Selector, Puzzle_Game, Game_Win, Game_Over]
+    scene: [Start, Instruction, Picture_Selector, Picture_Selector2, Puzzle_Game, Game_Win, Game_Over]
 };
 
 var game = new Phaser.Game(config);
