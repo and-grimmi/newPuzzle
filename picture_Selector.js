@@ -1,7 +1,7 @@
 /**********************************************************     GLOBALE VARIABLEN   **********************************************/
 
-var btn_home;                                                        // Button zur Startseie
-var btn_img1, btn_img2, btn_img3, btn_img4;                          // Bildauswahl
+var btn_home, btn_next;                                                        // Button zur Startseie
+var btn_img5, btn_img6, btn_img7, btn_img8;                          // Bildauswahl
 var background;                                                      // Hintergrundbild
 var coin, counterText, count;                                        // Komponenten für die Punkte (Münzen) 
 var levelDificulty;  
@@ -38,6 +38,7 @@ class Picture_Selector extends Phaser.Scene{
         this.load.image('image02', 'assets/image02.png');
         this.load.image('image03', 'assets/image03.png');
         this.load.image('image04', 'assets/image04.png');
+        this.load.image('next', 'assets/next.png');
     }
 
     create() {   
@@ -91,61 +92,67 @@ class Picture_Selector extends Phaser.Scene{
         
         **/
 
-        btn_img1 = this.add.image(0,0, 'image01');
-        btn_img1.setScale(0.5);
-        btn_img1.y = game.config.height * 0.30;
-        btn_img1.x = game.config.width * 0.25;
-        btn_img1.setInteractive();
-        btn_img1.on('pointerup', () => {this.scene.start('Puzzle_Game',{ dificulty: levelDificulty, img: 'image01'})});
-        btn_img1.on('pointerover', () => {
-            btn_img1.setTint(0x7a7a7a);
+        btn_img5 = this.add.image(0,0, 'image01');
+        btn_img5.setScale(0.5);
+        btn_img5.y = game.config.height * 0.30;
+        btn_img5.x = game.config.width * 0.25;
+        btn_img5.setInteractive();
+        btn_img5.on('pointerup', () => {this.scene.start('Puzzle_Game',{ dificulty: levelDificulty, img: 'image01'})});
+        btn_img5.on('pointerover', () => {
+            btn_img5.setTint(0x7a7a7a);
         });
-        btn_img1.on('pointerout', () => {
-            btn_img1.clearTint();
-        });
-        
-
-        btn_img2 = this.add.image(0,0, 'image02');
-        btn_img2.setScale(0.5);
-        btn_img2.y = game.config.height * 0.30;
-        btn_img2.x = game.config.width * 0.75;
-        btn_img2.setInteractive();
-        btn_img2.on('pointerup', () => {this.scene.start('Puzzle_Game',{dificulty: levelDificulty, img: 'image02'})});
-        btn_img2.on('pointerover', () => {
-            btn_img2.setTint(0x7a7a7a);
-        });
-        btn_img2.on('pointerout', () => {
-            btn_img2.clearTint();
-        });
-
-        btn_img3 = this.add.image(0,0, 'image03');
-        btn_img3.setScale(0.5);
-        btn_img3.y = game.config.height * 0.70;
-        btn_img3.x = game.config.width * 0.25;
-        btn_img3.setInteractive();
-        btn_img3.on('pointerup', () => {this.scene.start('Puzzle_Game',{dificulty: levelDificulty, img: 'image03'})});
-        btn_img3.on('pointerover', () => {
-            btn_img3.setTint(0x7a7a7a);
-        });
-        btn_img3.on('pointerout', () => {
-            btn_img3.clearTint();
-        });
-
-        btn_img4 = this.add.image(0,0, 'image04');
-        btn_img4.setScale(0.5);
-        btn_img4.y = game.config.height * 0.70;
-        btn_img4.x = game.config.width * 0.75;
-        btn_img4.setInteractive();
-        btn_img4.on('pointerup', () => {this.scene.start('Puzzle_Game',{dificulty: levelDificulty, img: 'image04'})});
-        btn_img4.on('pointerover', () => {
-            btn_img4.setTint(0x7a7a7a);
-        });
-        btn_img4.on('pointerout', () => {
-            btn_img4.clearTint();
+        btn_img5.on('pointerout', () => {
+            btn_img5.clearTint();
         });
         
 
+        btn_img6 = this.add.image(0,0, 'image02');
+        btn_img6.setScale(0.5);
+        btn_img6.y = game.config.height * 0.30;
+        btn_img6.x = game.config.width * 0.75;
+        btn_img6.setInteractive();
+        btn_img6.on('pointerup', () => {this.scene.start('Puzzle_Game',{dificulty: levelDificulty, img: 'image02'})});
+        btn_img6.on('pointerover', () => {
+            btn_img6.setTint(0x7a7a7a);
+        });
+        btn_img6.on('pointerout', () => {
+            btn_img6.clearTint();
+        });
 
+        btn_img7 = this.add.image(0,0, 'image03');
+        btn_img7.setScale(0.5);
+        btn_img7.y = game.config.height * 0.70;
+        btn_img7.x = game.config.width * 0.25;
+        btn_img7.setInteractive();
+        btn_img7.on('pointerup', () => {this.scene.start('Puzzle_Game',{dificulty: levelDificulty, img: 'image03'})});
+        btn_img7.on('pointerover', () => {
+            btn_img7.setTint(0x7a7a7a);
+        });
+        btn_img7.on('pointerout', () => {
+            btn_img7.clearTint();
+        });
+
+        btn_img8 = this.add.image(0,0, 'image04');
+        btn_img8.setScale(0.5);
+        btn_img8.y = game.config.height * 0.70;
+        btn_img8.x = game.config.width * 0.75;
+        btn_img8.setInteractive();
+        btn_img8.on('pointerup', () => {this.scene.start('Puzzle_Game',{dificulty: levelDificulty, img: 'image04'})});
+        btn_img8.on('pointerover', () => {
+            btn_img8.setTint(0x7a7a7a);
+        });
+        btn_img8.on('pointerout', () => {
+            btn_img8.clearTint();
+        });
+        
+
+        btn_next = this.add.image(game.config.width * 0.90, game.config.height * 0.92, 'next');
+        btn_next.setScale(0.1);
+        btn_next.setInteractive();
+        btn_next.on('pointerdown', () => {
+            this.scene.stop('Picture_Selector');
+            this.scene.start('Picture_Selector2',{dificulty: levelDificulty, winCoins: winCoins});
+        });
 
     }
 }
