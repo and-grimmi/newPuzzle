@@ -1,6 +1,6 @@
 /**********************************************************     GLOBALE VARIABLEN   **********************************************/
 
-var btn_home, btn_next;                                                        // Button zur Startseie
+var btn_home, btn_next;                                              // Button zur Startseie
 var btn_img5, btn_img6, btn_img7, btn_img8;                          // Bildauswahl
 var background;                                                      // Hintergrundbild
 var coin, counterText, count;                                        // Komponenten für die Punkte (Münzen) 
