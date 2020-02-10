@@ -5,7 +5,7 @@ var img;                                                      // wo soll das Bil
 var puzzleHeight, puzzleWidth ;                               // Höhe und Breide des Puzzles
 var pieces, pieceWidth, pieceHeight;                           //einzelne Puzzleteile
 var selectedPiece, exchangedPiece                             // 
-var mouse;                                                     // X- und Y-Position der Maus
+var pointer;                                                     // X- und Y-Position
 var pieceClicked = false;  
 var moves = false;                            
 var movesCount = 0;
@@ -83,7 +83,7 @@ class Puzzle_Game extends Phaser.Scene {
     **/
     prepareBoard(){
         pieces = [];
-        mouse = {x:0,y:0};
+        pointer = {x:0,y:0};
         selectedPiece = null;
         exchangedPiece = null;
       
@@ -218,13 +218,13 @@ function shuffleArray(o){
 Prüfen, ob der Klick innerhalb des definierten Bereichs liegt.
 **/
 function onPuzzleClick(tx, ty){
-    mouse.x = tx;
-    mouse.y = ty;
+    pointer.x = tx;
+    pointer.y = ty;
      //canMove
-    if (mouse.x > (canvasX + puzzleWidth) ||  
-         mouse.x < (canvasX) ||  
-         mouse.y < (canvasY) ||  
-         mouse.y > (canvasY + puzzleHeight)) {
+    if (pointer.x > (canvasX + puzzleWidth) ||  
+         pointer.x < (canvasX) ||  
+         pointer.y < (canvasY) ||  
+         pointer.y > (canvasY + puzzleHeight)) {
             
     }  else{
         movePiece();
@@ -259,7 +259,7 @@ function movePiece(){
             movesCount ++;
             pieceClicked = false;
 
-            resetPuzzleAndCheckWin();
+            CheckWin();
         }
         
         
@@ -275,7 +275,7 @@ function checkPieceClicked(){
     var piece;
     for(i = 0;i < pieces.length;i++){
         piece = pieces[i];
-        if(mouse.x < piece.xPos || mouse.x > (piece.xPos + pieceWidth) || mouse.y < piece.yPos || mouse.y > (piece.yPos + pieceHeight)){
+        if(pointer.x < piece.xPos || pointer.x > (piece.xPos + pieceWidth) || pointer.y < piece.yPos || pointer.y > (piece.yPos + pieceHeight)){
             //PIECE NOT HIT
         }
         else{
@@ -289,7 +289,7 @@ function checkPieceClicked(){
 ***********************************    PUZZLE GEWINNEN    ***********************************************
 Überprüfen, ob jedes Puzzleteil sich in seiner Gewinnposition befindet
 **/
-function resetPuzzleAndCheckWin(){
+function CheckWin(){
     context.clearRect(canvasX, canvasY, puzzleWidth, puzzleHeight);
     var gameWin = true;
     var i;
